@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+<!--        <SpringProfile name="dev">-->
+<!--            <Console name="Console" target="SYSTEM_OUT">-->
+<!--                <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>-->
+<!--            </Console>-->
+<!--        </SpringProfile>-->
+<!--        <SpringProfile name="sit">-->
+<!--            <Console name="Console" target="SYSTEM_OUT">-->
+<!--                <PatternLayout pattern="%d{HH:mm:ss.} [%t] %-5level %logger{36} - %msg%n"/>-->
+<!--            </Console>-->
+<!--        </SpringProfile>-->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <filters>
+                <ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            </filters>
+        </Console>
+
+        <RollingFile name="rollFilesize" fileName="D:test.log" filePattern="%d{yyyy-MM-dd}"
+
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
