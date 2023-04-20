@@ -19,8 +19,6 @@
             </filters>
         </Console>
 
-        <RollingFile name="rollFilesize" fileName="D:test.log" filePattern="%d{yyyy-MM-dd}"
-
     </Appenders>
     <Loggers>
         <Root level="trace">
