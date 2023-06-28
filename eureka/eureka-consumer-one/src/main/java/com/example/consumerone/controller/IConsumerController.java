@@ -19,4 +19,7 @@ public interface IConsumerController {
 
     @GetMapping("/getDate")
     Date getDate(Date date);
+
+    @GetMapping("/getUuid")
+    String getUuid(String name);
 }

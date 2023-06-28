@@ -3,9 +3,13 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:9001/eureka
+      defaultZone: http://jack:jack@localhost:9001/eureka
 spring:
   application:
     name: eureka-consumer
   profiles:
     active: dev
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
